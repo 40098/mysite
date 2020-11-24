@@ -1,0 +1,17 @@
+<html>
+    <head>
+    </head>
+    <body>
+        {% if latest_order_list %}
+    <table>
+    {% for order in latest_order_list %}
+        <tr>
+            <td><a href="/orders/{{ order.id }}/">{{ order.code }}</a></td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No orders are available.</p>
+{% endif %}
+    </body>
+</html>
